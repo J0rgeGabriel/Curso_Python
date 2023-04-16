@@ -32,7 +32,7 @@ else:
 """
 """
 #Ex01:
-#Faça um programa que mostra na tala uma contagem regrassiva,i ndo de 10 até O, com uma pausa de segundo entre elas.
+#Faça um programa que mostra na tala uma contagem regrassiva, indo de 10 até O, com uma pausa de segundo entre elas.
 
 for contagem in range(10,0,-1):
     print(contagem)
@@ -66,4 +66,15 @@ for n in range (0,6):
     if numerosINT %2 == 0:
         soma += numerosINT
 print(f"A soma dos numeros pares é {soma}")
+"""
+"""
+#Ex05:
+#Faça um programa que leia uma frase e diga ela é palíndromo ou não
+frase = input("Digite uma frase!")
+frase = frase.replace(" ", " ").lower() #replace(): todos os espaços em branco são removidos da string
+
+if frase == frase[::-1]:        #[::1]: a string é invertida
+    print("A frase é um palíndromo!")
+else:
+    print("A frase não é um palíndromo!")
 """
