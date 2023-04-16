@@ -78,3 +78,4 @@ if frase == frase[::-1]:        #[::1]: a string é invertida
 else:
     print("A frase não é um palíndromo!")
 """
+
