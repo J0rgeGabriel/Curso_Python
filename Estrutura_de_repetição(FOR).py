@@ -78,4 +78,24 @@ if frase == frase[::-1]:        #[::1]: a string é invertida
 else:
     print("A frase não é um palíndromo!")
 """
+"""
+#Ex06:
+#Faça um programa que leia o ano de nascimento de 7 pessoas e informe quantas atingiram a maioridade e quantas não:
+from datetime import date
 
+atual = date.today().year
+totalMaior = 0
+totalMenor = 0
+
+for pessoas in range (1,8):
+    nasci = int(input(f'Em que ano a {pessoas}ª pessoa nasceu? '))
+    idade = atual - nasci
+
+    if idade >= 18:
+        totalMaior += 1
+    else:
+        totalMenor += 1
+
+print(f'Ao todo tivemos {totalMaior} pessoas maiores de idade')
+print(f'E tambem tivemos {totalMenor} pessoas menores de idade')
+"""
