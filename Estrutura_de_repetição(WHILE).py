@@ -49,39 +49,77 @@ while True:
     for x in range(1,6):
         print(x)
 '''
-
+'''
+#Ex02:
 while True:
-    n1 = float(input("Digite o primeiro numero: "))
-    n2 = float(input("Digite o segundo numero: "))
-    opcao = input("Escolha uma opção:\n"
-                  "1 - Somar\n"
-                  "2 - multiplicar\n"
-                  "3 - maior \n"
-                  "4 - novos numeros\n"
-                  "5 - sair do programa")
+    n1 = float(input("Digite o primeiro número: "))
+    n2 = float(input("Digite o segundo número: "))
+    opcao = input("Selecione umas das opções a seguir para continuar:\n"
+                  "1 - somar\n"
+                  "2 - subtrair\n"
+                  "3 - multiplicar\n"
+                  "4 - dividir\n"
+                  "5 - maior\n"
+                  "6 - menor\n"
+                  "7 - novos números\n"
+                  "8 - sair do programa")
 
     if opcao == "1":
-        total = n1 + n2
-        print(f"A soma do primeiro numero + o segundo numero é {total}")
+        resultado = n1 + n2
+        print(f"A soma de {n1} + {n2} = {resultado}")
 
     elif opcao == "2":
-        total = n1 * n2
-        print(f"A multiplicação do primeiro numero com o segundo numero é {total}")
+        selecionar = input(f"Você deseja fazer {n1} - {n2}? [S/N]").upper()
+        while selecionar not in("S/N"):
+            selecionar = input(f"Valor invalido!! Você deseja fazer {n1} - {n2}? [S/N]").upper()
+        if selecionar == "S":
+            resultado = n1 - n2
+            print(f"A subtração de {n1} por {n2} é {resultado}")
+        elif selecionar == "N":
+            selecionar = input(f"Você deseja fazer {n2} - {n1}? [S/N]").upper()
+            while selecionar not in("S/N"):
+                selecionar = input(f"Valor invalido!! Você deseja fazer {n2} - {n1}? [S/N]").upper()
+            if selecionar == "S":
+                resultado = n2 - n1
+                print(f"A subtração de {n2} por {n1} é {resultado}")
 
     elif opcao == "3":
-        if n1 > n2:
-            print(f"O numero {n1} é maior que {n2}")
-        else:
-            print(f"O numero {n2} é maior que {n1}")
+        total = n1 * n2
+        print(f"A multiplicação de {n1} com {n2 } é {total}")
 
     elif opcao == "4":
-        continue #volta ao inicio do loop
+        selecionar = input(f"Você deseja fazer {n1} ÷ {n2}? [S/N]").upper()
+        while selecionar not in("S/N"):
+            selecionar = input(f"Valor invalido!! Você deseja fazer {n1} ÷ {n2}? [S/N]").upper()
+        if selecionar == "S":
+            resultado = n1 / n2
+            print(f"A divisao de {n1} por {n2} é {resultado}")
+        elif selecionar == "N":
+            selecionar = input(f"Você deseja fazer {n2} ÷ {n1}? [S/N]").upper()
+            while selecionar not in("S/N"):
+                selecionar = input(f"Valor invalido!! Você deseja fazer {n2} ÷ {n1}? [S/N]").upper()
+            if selecionar == "S":
+                resultado = n2 / n1
+                print(f"A divisao de {n2} por {n1} é {resultado}")
 
     elif opcao == "5":
-        print("Saindo do programa")
-        break
+        if n1 > n2:
+            print(f"{n1} é maior que {n2}")
+        else:
+            print(f"{n2} é maior que {n1}")
 
-    else:
-        print("Opção inválida, tente novamente.")
+    elif opcao == "6":
+        if n1 < n2:
+            print(f"{n1} é menor que {n2}")
+        else:
+            print(f"{n2} é menor que {n1}")
+
+    elif opcao == "7":
+        continue
+
+    elif opcao == "8":
+        print("Saindo do programa!")
+        break
 print("\n")
-print("Fim do programa.")
+print("Fim do programa!!")
+'''
