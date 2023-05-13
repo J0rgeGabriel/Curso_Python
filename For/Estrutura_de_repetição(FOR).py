@@ -1,10 +1,10 @@
-"""
-for c in range (0,7,2):
+
+for c in range(1, 6):
     print(c)
 print('FIM')
-#se for apresentar o numero de forma decrescente faça: (6,0,-1)
-#caso queira fazer apresentar numeros de 2 em 2 faça: (0,7,2)
-"""
+# se for apresentar o numero de forma decrescente faça: (6,0,-1)
+# caso queira fazer apresentar numeros de 2 em 2 faça: (0,7,2)
+
 """
 for andar in range (0,10001,500):
     print(andar)
@@ -67,7 +67,7 @@ for n in range (0,6):
         soma += numerosINT
 print(f"A soma dos numeros pares é {soma}")
 """
-"""
+
 #Ex05:
 #Faça um programa que leia uma frase e diga ela é palíndromo ou não
 frase = input("Digite uma frase!")
@@ -98,4 +98,4 @@ for pessoas in range (1,8):
 
 print(f'Ao todo tivemos {totalMaior} pessoas maiores de idade')
 print(f'E tambem tivemos {totalMenor} pessoas menores de idade')
-"""
+
